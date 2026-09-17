@@ -19,7 +19,7 @@ export const Highlight = ({ children, color }) => (
 
 <Highlight color="#ff2f00">重要</Highlight> <Highlight color="#0373fc">注意</Highlight> <Highlight color="#00d679">提醒</Highlight>
 
-### [Coding Style wiki](https://github.com/michael811125/OxGFrame/wiki/Coding-Style)
+### [Coding Style wiki](https://github.com/cout-m6o/OxGFrame/wiki/Coding-Style)
 
 ---
 
@@ -29,7 +29,7 @@ export const Highlight = ({ children, color }) => (
 | :--- | :--- |
 | **命名空間** | `OxGFrame.NetFrame` |
 | **類型** | `public static class` |
-| **原始碼** | [NetFrames.cs](https://github.com/michael811125/OxGFrame/blob/master/Assets/OxGFrame/NetFrame/Scripts/Runtime/NetFrames.cs) |
+| **原始碼** | [NetFrames.cs](https://github.com/cout-m6o/OxGFrame/blob/master/Assets/OxGFrame/NetFrame/Scripts/Runtime/NetFrames.cs) |
 
 ```csharp
 using OxGFrame.NetFrame;
@@ -81,11 +81,11 @@ NetFrame 以節點（`NetNode`）為單位組織網路連線，每個節點擁�
 
 ### 更新器 (Updater) {#updater}
 
-`NetManager` 使用獨立的 `RTUpdater`（[Real-time Updater](https://github.com/michael811125/OxGKit/blob/master/Assets/OxGKit/TimeSystem/Scripts/Runtime/Core/Updater/RTUpdater.cs)）驅動所有節點的輪詢邏輯（資料接收、心跳、逾時與重連計時）。首次呼叫任一 `NetFrames` API 時，管理器會自動初始化並於**主執行緒**啟動更新器。
+`NetManager` 使用獨立的 `RTUpdater`（[Real-time Updater](https://github.com/cout-m6o/OxGKit/blob/master/Assets/OxGKit/TimeSystem/Scripts/Runtime/Core/Updater/RTUpdater.cs)）驅動所有節點的輪詢邏輯（資料接收、心跳、逾時與重連計時）。首次呼叫任一 `NetFrames` API 時，管理器會自動初始化並於**主執行緒**啟動更新器。
 
 <Highlight color="#00d679">提醒</Highlight> `RTUpdater` 為即時刷新器，不受 Unity `Time.timeScale` 影響，即使遊戲暫停，網路通訊依然正常運作。
 
-<Highlight color="#ff2f00">重要</Highlight> 若透過 [StartUpdaterOnThread](#startupdateronthread) 或 [ResetUpdaterOnThread](#resetupdateronthread) 改以獨立執行緒驅動，所有網路回呼（如 Binary 接收回呼）會於**非主執行緒**觸發，若需操作 Unity 元件，請務必注意執行緒安全並使用 [UMT](https://github.com/michael811125/OxGKit/blob/master/Assets/OxGKit/Utilities/Scripts/Runtime/UnityMainThread/UMT.cs) 派回主執行緒。
+<Highlight color="#ff2f00">重要</Highlight> 若透過 [StartUpdaterOnThread](#startupdateronthread) 或 [ResetUpdaterOnThread](#resetupdateronthread) 改以獨立執行緒驅動，所有網路回呼（如 Binary 接收回呼）會於**非主執行緒**觸發，若需操作 Unity 元件，請務必注意執行緒安全並使用 [UMT](https://github.com/cout-m6o/OxGKit/blob/master/Assets/OxGKit/Utilities/Scripts/Runtime/UnityMainThread/UMT.cs) 派回主執行緒。
 
 ---
 

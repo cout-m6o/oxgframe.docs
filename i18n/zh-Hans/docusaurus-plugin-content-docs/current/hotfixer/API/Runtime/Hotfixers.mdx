@@ -19,7 +19,7 @@ export const Highlight = ({ children, color }) => (
 
 <Highlight color="#ff2f00">重要</Highlight> <Highlight color="#0373fc">注意</Highlight> <Highlight color="#00d679">提醒</Highlight>
 
-### [Coding Style wiki](https://github.com/michael811125/OxGFrame/wiki/Coding-Style)
+### [Coding Style wiki](https://github.com/cout-m6o/OxGFrame/wiki/Coding-Style)
 
 ---
 
@@ -29,7 +29,7 @@ export const Highlight = ({ children, color }) => (
 | :--- | :--- |
 | **命名空间** | `OxGFrame.Hotfixer` |
 | **类型** | `public static class` |
-| **源码** | [Hotfixers.cs](https://github.com/michael811125/OxGFrame/blob/master/Assets/OxGFrame/Hotfixer/Scripts/Runtime/Hotfixers.cs) |
+| **源码** | [Hotfixers.cs](https://github.com/cout-m6o/OxGFrame/blob/master/Assets/OxGFrame/Hotfixer/Scripts/Runtime/Hotfixers.cs) |
 
 ```csharp
 using OxGFrame.Hotfixer;
@@ -148,7 +148,7 @@ UniEvent.AddListener<HotfixEvents.HotfixCreateDownloader>((message) =>
 
 ### 禁用热更新 {#hybridclr-disabled}
 
-<Highlight color="#ff2f00">重要</Highlight> 如果禁用 HybridCLR（HybridCLR Settings 取消勾选 **Enable**），必须搭配宏 [OXGFRAME_HYBRIDCLR_DISABLED](https://github.com/michael811125/OxGFrame/wiki/Macro-Definitions)，才能有效剔除热更流程。
+<Highlight color="#ff2f00">重要</Highlight> 如果禁用 HybridCLR（HybridCLR Settings 取消勾选 **Enable**），必须搭配宏 [OXGFRAME_HYBRIDCLR_DISABLED](https://github.com/cout-m6o/OxGFrame/wiki/Macro-Definitions)，才能有效剔除热更流程。
 
 ![](/img/hotfixer/api/runtime/img_1.png)
 
@@ -279,7 +279,7 @@ public static bool IsDisabled()
 
 检查当前环境是否禁用了热更新功能（由编译期宏决定，通常用于开发者模式）。
 
-<Highlight color="#ff2f00">重要</Highlight> 如果禁用 HybridCLR，必须搭配宏 [OXGFRAME_HYBRIDCLR_DISABLED](https://github.com/michael811125/OxGFrame/wiki/Macro-Definitions)，才能有效剔除热更流程（参考[禁用热更新](#hybridclr-disabled)）。
+<Highlight color="#ff2f00">重要</Highlight> 如果禁用 HybridCLR，必须搭配宏 [OXGFRAME_HYBRIDCLR_DISABLED](https://github.com/cout-m6o/OxGFrame/wiki/Macro-Definitions)，才能有效剔除热更流程（参考[禁用热更新](#hybridclr-disabled)）。
 
 ---
 

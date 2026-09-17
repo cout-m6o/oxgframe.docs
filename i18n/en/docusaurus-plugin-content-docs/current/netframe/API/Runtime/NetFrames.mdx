@@ -19,7 +19,7 @@ export const Highlight = ({ children, color }) => (
 
 <Highlight color="#ff2f00">Important</Highlight> <Highlight color="#0373fc">Attention</Highlight> <Highlight color="#00d679">Reminder</Highlight>
 
-### [Coding Style wiki](https://github.com/michael811125/OxGFrame/wiki/Coding-Style)
+### [Coding Style wiki](https://github.com/cout-m6o/OxGFrame/wiki/Coding-Style)
 
 ---
 
@@ -29,7 +29,7 @@ export const Highlight = ({ children, color }) => (
 | :--- | :--- |
 | **Namespace** | `OxGFrame.NetFrame` |
 | **Type** | `public static class` |
-| **Source** | [NetFrames.cs](https://github.com/michael811125/OxGFrame/blob/master/Assets/OxGFrame/NetFrame/Scripts/Runtime/NetFrames.cs) |
+| **Source** | [NetFrames.cs](https://github.com/cout-m6o/OxGFrame/blob/master/Assets/OxGFrame/NetFrame/Scripts/Runtime/NetFrames.cs) |
 
 ```csharp
 using OxGFrame.NetFrame;
@@ -81,11 +81,11 @@ Three `INetProvider` implementations are built in; pass the matching `NetOption`
 
 ### Updater {#updater}
 
-`NetManager` uses an independent `RTUpdater` ([Real-time Updater](https://github.com/michael811125/OxGKit/blob/master/Assets/OxGKit/TimeSystem/Scripts/Runtime/Core/Updater/RTUpdater.cs)) to drive the polling logic of all nodes (data receiving, heartbeat, receive-timeout, and reconnection timing). The manager initializes automatically on the first call to any `NetFrames` API and starts the updater on the **main thread**.
+`NetManager` uses an independent `RTUpdater` ([Real-time Updater](https://github.com/cout-m6o/OxGKit/blob/master/Assets/OxGKit/TimeSystem/Scripts/Runtime/Core/Updater/RTUpdater.cs)) to drive the polling logic of all nodes (data receiving, heartbeat, receive-timeout, and reconnection timing). The manager initializes automatically on the first call to any `NetFrames` API and starts the updater on the **main thread**.
 
 <Highlight color="#00d679">Reminder</Highlight> `RTUpdater` is a real-time updater unaffected by Unity's `Time.timeScale` — network communication keeps running even while the game is paused.
 
-<Highlight color="#ff2f00">Important</Highlight> When the updater is switched to a separate thread via [StartUpdaterOnThread](#startupdateronthread) or [ResetUpdaterOnThread](#resetupdateronthread), all network callbacks (such as the binary receive handler) fire on a **non-main thread**. If you need to touch Unity components, take care of thread safety and dispatch back to the main thread with [UMT](https://github.com/michael811125/OxGKit/blob/master/Assets/OxGKit/Utilities/Scripts/Runtime/UnityMainThread/UMT.cs).
+<Highlight color="#ff2f00">Important</Highlight> When the updater is switched to a separate thread via [StartUpdaterOnThread](#startupdateronthread) or [ResetUpdaterOnThread](#resetupdateronthread), all network callbacks (such as the binary receive handler) fire on a **non-main thread**. If you need to touch Unity components, take care of thread safety and dispatch back to the main thread with [UMT](https://github.com/cout-m6o/OxGKit/blob/master/Assets/OxGKit/Utilities/Scripts/Runtime/UnityMainThread/UMT.cs).
 
 ---
 

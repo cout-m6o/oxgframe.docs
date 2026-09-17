@@ -19,7 +19,7 @@ export const Highlight = ({ children, color }) => (
 
 <Highlight color="#ff2f00">重要</Highlight> <Highlight color="#0373fc">注意</Highlight> <Highlight color="#00d679">提醒</Highlight>
 
-### [Coding Style wiki](https://github.com/michael811125/OxGFrame/wiki/Coding-Style)
+### [Coding Style wiki](https://github.com/cout-m6o/OxGFrame/wiki/Coding-Style)
 
 ---
 
@@ -29,7 +29,7 @@ export const Highlight = ({ children, color }) => (
 | :--- | :--- |
 | **命名空间** | `OxGFrame.NetFrame` |
 | **类型** | `public static class` |
-| **源码** | [NetFrames.cs](https://github.com/michael811125/OxGFrame/blob/master/Assets/OxGFrame/NetFrame/Scripts/Runtime/NetFrames.cs) |
+| **源码** | [NetFrames.cs](https://github.com/cout-m6o/OxGFrame/blob/master/Assets/OxGFrame/NetFrame/Scripts/Runtime/NetFrames.cs) |
 
 ```csharp
 using OxGFrame.NetFrame;
@@ -81,11 +81,11 @@ NetFrame 以节点（`NetNode`）为单位组织网络连接，每个节点拥�
 
 ### 更新器 (Updater) {#updater}
 
-`NetManager` 使用独立的 `RTUpdater`（[Real-time Updater](https://github.com/michael811125/OxGKit/blob/master/Assets/OxGKit/TimeSystem/Scripts/Runtime/Core/Updater/RTUpdater.cs)）驱动所有节点的轮询逻辑（数据接收、心跳、超时与重连计时）。首次调用任一 `NetFrames` API 时，管理器会自动初始化并在**主线程**启动更新器。
+`NetManager` 使用独立的 `RTUpdater`（[Real-time Updater](https://github.com/cout-m6o/OxGKit/blob/master/Assets/OxGKit/TimeSystem/Scripts/Runtime/Core/Updater/RTUpdater.cs)）驱动所有节点的轮询逻辑（数据接收、心跳、超时与重连计时）。首次调用任一 `NetFrames` API 时，管理器会自动初始化并在**主线程**启动更新器。
 
 <Highlight color="#00d679">提醒</Highlight> `RTUpdater` 为实时刷新器，不受 Unity `Time.timeScale` 影响，即使游戏暂停，网络通信依然正常运作。
 
-<Highlight color="#ff2f00">重要</Highlight> 若通过 [StartUpdaterOnThread](#startupdateronthread) 或 [ResetUpdaterOnThread](#resetupdateronthread) 改以独立线程驱动，所有网络回调（如 Binary 接收回调）会在**非主线程**触发，若需操作 Unity 组件，请务必注意线程安全并使用 [UMT](https://github.com/michael811125/OxGKit/blob/master/Assets/OxGKit/Utilities/Scripts/Runtime/UnityMainThread/UMT.cs) 调度回主线程。
+<Highlight color="#ff2f00">重要</Highlight> 若通过 [StartUpdaterOnThread](#startupdateronthread) 或 [ResetUpdaterOnThread](#resetupdateronthread) 改以独立线程驱动，所有网络回调（如 Binary 接收回调）会在**非主线程**触发，若需操作 Unity 组件，请务必注意线程安全并使用 [UMT](https://github.com/cout-m6o/OxGKit/blob/master/Assets/OxGKit/Utilities/Scripts/Runtime/UnityMainThread/UMT.cs) 调度回主线程。
 
 ---
 

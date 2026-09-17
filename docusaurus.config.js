@@ -32,8 +32,8 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'cout-m6o', // Usually your GitHub org/user name.
+  projectName: 'oxgframe.docs', // Usually your repo name.
 
   onBrokenLinks: 'throw',
 
@@ -73,7 +73,7 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/cout-m6o/oxgframe.docs/tree/master/',
           lastVersion: 'current',
           versions: {
             current: {
@@ -87,7 +87,7 @@ const config = {
         blog: {
           showReadingTime: true,
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/cout-m6o/oxgframe.docs/tree/master/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -144,7 +144,7 @@ const config = {
             position: 'left'
           },
           {
-            href: 'https://github.com/michael811125/OxGFrame',
+            href: 'https://github.com/cout-m6o/OxGFrame',
             label: 'GitHub',
             position: 'right',
           },
@@ -167,15 +167,15 @@ const config = {
             items: [
               {
                 label: 'FlappyBird with OxGFrame',
-                href: 'https://github.com/michael811125/FlappyBird_OxGFrame',
+                href: 'https://github.com/cout-m6o/FlappyBird_OxGFrame',
               },
               {
                 label: 'OxGKit',
-                href: 'https://github.com/michael811125/OxGKit',
+                href: 'https://github.com/cout-m6o/OxGKit',
               },
               {
                 label: 'LWMyBox',
-                href: 'https://github.com/michael811125/LWMyBox',
+                href: 'https://github.com/cout-m6o/LWMyBox',
               }
             ],
           },
@@ -197,12 +197,12 @@ const config = {
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/michael811125/OxGFrame',
+                href: 'https://github.com/cout-m6o/OxGFrame',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} <a href="https://github.com/michael811125">MichaelO</a>.`,
+        copyright: `Copyright © ${new Date().getFullYear()} <a href="https://github.com/cout-m6o">MichaelO</a>.`,
       },
       prism: {
         theme: prismThemes.github,
